@@ -47,13 +47,18 @@ cd 3tier-todo-app
 ### Step : We need to create Amazon ECR for both Tiers (Frontend & Backend)
 - Go to aws console and lookup for ECR
 - click on “Create Repository” for frontend and set visibility settings to public
+- 
 ![ecr-repo](images/ecr-repo.webp)
+
 - select one ECR repo and click view push command 
 - Goto Application-Code directory  run ```cd backend``` then run these command one by one to create backend image
+- 
 ![back-image](images/back-image.PNG)
+
 - Again run ```cd frontend``` then run these command one by one to create frontend image
 
 ![ECR.PNG](images/ECR.PNG)
+
 ### Step: Create an eks cluster
 - EKS cluster can be set up using below commands on base EC2 instance:
 ``` shell
@@ -96,8 +101,6 @@ helm install aws-load-balancer-controller eks/aws-load-balancer-controller -n ku
 - change image url by which we create on ecr
 - now we ready to deploy backend app
 ``` shell
-kubectl apply -f frontend-deployment.yaml
-kubectl apply -f frontend-service.yaml
 kubectl apply -f backend-deployment.yaml
 kubectl apply -f backend-service.yaml
 kubectl get pods -n workshop
@@ -121,6 +124,7 @@ kubectl get ing -n workshop
 - The resulted DNS name will fetch the application deployment results. Copy and paste the DNS name to browser to check your application status using three-tier deployment method.
 
 ![app.png](images/app.png)
+
 ### Step: Final Steps: Clean UP
 - In current Kubernets-Manifests-file directory delete deployments using below CMD
   ``` kubectl delete -f .```
