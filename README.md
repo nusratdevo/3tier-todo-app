@@ -1,4 +1,4 @@
-# Three-Tier Web Application Deployment on AWS EKS using AWS ECR & EKS Cluster
+# Three-Tier Web Application Deployment on AWS EKS using Terraform, AWS ECR & EKS Cluster
 
 ![overview](images/overview.webp)
 
