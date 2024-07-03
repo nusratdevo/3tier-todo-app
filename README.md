@@ -1,4 +1,4 @@
-# Three-Tier Web Application Deployment on AWS EKS using AWS EKS, ArgoCD, Prometheus, Grafana, and Jenkins
+# Three-Tier Web Application Deployment on AWS EKS using AWS ECR & EKS Cluster
 
 ![overview](images/overview.webp)
 
@@ -8,10 +8,12 @@ This repository hosts the implementation of a Three-Tier Web App using ReactJS, 
 
 ## Project Details
 🛠️ **Tools Explored:**
+- Aws Acoount
 - Terraform & AWS CLI for AWS infrastructure
-- Jenkins Inage update
+- AWS ECR For SVC Repositories
 - Helm for install load balancer
-- ArgoCD for GitOps practices
+- Ingress Controller
+
 
 ### Step 1: IAM Configuration
 - create IAM user `user` with administration access.
